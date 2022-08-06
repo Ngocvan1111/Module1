@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Average</title>
+    <style>
+        .canphai {
+            text-align: right;
+        }
+        .cantrai {
+            text-align: left;
+        }
+        .abc {
+            text-align: center;
+            background: burlywood;
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            left: 320px;
+            top: 10px
+        }
+    </style>
+
+</head>
+<body>
+<section>
+    <form action="" name="dataform">
+        <div>
+            <table>
+                <tr>
+                    <td class="canphai"> <label for="vl">Nhập điểm vật lý:</label></td>
+                    <td class="cantrai">  <input type="text" name="diemvatly" id="vl" placeholder="nhập điểm môn vật lý tại đây"><br></td>
+                </tr>
+                <tr>
+                    <td class="canphai">  <label for="hoa">Nhập điểm hóa học:</label></td>
+                    <td class="cantrai"> <input type="text" name="diemhoa" id="hoa" placeholder="nhập điểm môn Hóa tại đây"><br></td>
+                </tr>
+                <tr>
+                    <td class="canphai"> <label for="sinh">Nhập điểm vật lý:</label></td>
+                    <td class="cantrai"> <input type="text" name="diemsinh" id="sinh" placeholder="nhập điểm môn sinh học tại đây"><br></td>
+                </tr>
+            </table>
+
+        </div>
+    <div>
+        <input type="button"  value="caculating" onclick="average()">
+    </div>
+    </form>
+    <div class="abc"></div>
+</section>
+
+
+</body>
+<script src="index.js"></script>
+</html>

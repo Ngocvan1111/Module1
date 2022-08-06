@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản 2</title>
+    <style>
+        .ngoai {
+            background-color: burlywood ;
+            width: 700px;
+            height: 500px;
+            position: relative;
+            left: 5px;
+            top: 5px;
+        }
+        .trong {
+            background-color: #ffff00;
+            width: 690px;
+            height: 35px;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+        form {
+            position: absolute;
+            top: 50px;
+        }
+        .nut {
+            position: absolute;
+            left: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ngoai">
+        <div class="trong"><h1 style="text-align: left; margin-top: 0;" >ĐĂNG KÝ HỌC VIÊN</h1></div>
+        <form>
+            <table cellpadding="10" style="margin-top: 0">
+                <tr>
+                    <td>Họ và tên</td>
+                    <td><input type="text" name="nhap ho ten"  style="width: 300px; height: 20px ;" ></td>
+                </tr>
+                <tr>
+                       <td>Ngày sinh</td>
+                       <td><input type="text" name="Nhập họ tên" style="width: 150px; height: 20px ;"></td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td><input type="radio" name="gender" value="Nam">Nam <input type="radio" name="gender" value="Nữ">Nữ</td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><textarea rows="4" cols="50"> </textarea> </td>
+                </tr>
+                <tr>
+                    <td>Lớp</td>
+                    <td><select>
+                        <option value="--chọn lớp--">--chọn lớp--</option>
+                        <option value="lop2">Lớp 2</option>
+                        <option value="lop3">Lớp 3</option>
+                        <option value="lop4">Lớp 4</option>
+                        <option value="lop5">Lớp 5</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="youremail" style="width: 200px; height: 20px ;"> </td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td><input type="text" name="Nhapnumberphone" style="width: 200px; height: 20px ;"></td>
+                </tr>
+            </table>
+            <div class="nut">
+                <input type="Submit" value="Đăng ký">
+                <button type="reset"> Nhập lại </button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>

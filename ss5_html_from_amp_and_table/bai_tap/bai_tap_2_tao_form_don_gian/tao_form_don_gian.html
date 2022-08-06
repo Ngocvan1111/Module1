@@ -2,9 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tạo Form đơn giản</title>
+    <style>
+        .vienxanh {
+            background-color: aqua;
+            width: 60%;
+            height: 300px;
+            position: relative;
+            margin: auto;
+        }
+        .thongtin {
+            background-color: white ;
+            width: 95%;
+            height: 90%;
+            position: absolute;
+            left: 2.5%;
+            top: 5%;
+        }
+        .cam {
+            background-color: #d2691e;
+            width: 96%;
+            height: 40px;
+            position: absolute;
+            left: 2%;
+            top: 4%;
+        }
+        form {
+           position: absolute;
+            left: 30px;
+            top: 70px;
+        }
+        table, td {
+            Border: 1px solid white;
+            border-collapse: collapse;
+        }
+        table {
+            width: 350px;
+
+        }
+        .bang2 {
+            width: 500px;
+        }
+        .nut {
+            position: absolute;
+            left: 100px;
+        }
+
+
+
+    </style>
 </head>
 <body>
-$END$
+    <div class="vienxanh">
+        <div class="thongtin">
+            <div class="cam"><h1 style="text-align: center; line-height: 2px" >SỞ THÍCH CỦA BẠN</h1></div>
+            <form action="https://docs.google.com/spreadsheets/d/1daUIGFJr9aV5wbKJ6AD7n1ad-b-81pXJBZFl9u71p2c/edit?usp=sharing" >
+                <table>
+                    <tr>
+                        <td style="text-align: right">Họ và tên:</td>
+                        <td><input type="text" name="hovaten"><br></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">Email:</td>
+                        <td> <input type="text" name="email"><br</td>
+                    </tr>
+                </table>
+                <table class="bang2">
+                    <tr>
+                        <td style="text-align: right">Sở thích:</td>
+                        <td><input type="checkbox" name="Thể thao" value="on"> Thể thao </td>
+                        <td><input type="checkbox" name="Thể thao" value="on"> Thể thao</td>
+                        <td><input type="checkbox" name="Thể thao" value="on"> Thể thao</td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td><input type="checkbox" name="Thể thao" value="on"> Thể thao</td>
+                        <td><input type="checkbox" name="Thể thao" value="on"> Thể thao</td>
+                        <td><input type="checkbox" name="Thể thao" value="on"> Thể thao</td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td colspan="3"><input type="checkbox" name="Thể thao" value="on"> Thể thao</td>
+                    </tr>
+                </table>
+                        <div class="nut">
+                            <input type="Submit" value="Gửi thông tin">
+                            <input type="Submit" value="Nhập lại">
+                        </div>
+
+                <!--                Họ và tên:-->
+<!--                <input type="text" name="hovaten"><br>-->
+
+<!--                Email:-->
+<!--                <input type="text" name="email"><br>-->
+
+<!--                Sở thích-->
+<!--                <input type="radio" name="gender" value="thể thao" checked> Thể thao-->
+<!--                <input type="radio" name="gender" value="âm nhạc"> Âm nhạc-->
+<!--                <input type="radio" name="gender" value="đọc sách"> Đọc sách <br>-->
+<!--                <p> </p>-->
+<!--                <input type="radio" name="gender" value="thể thao" checked> Thể thao-->
+<!--                <input type="radio" name="gender" value="âm nhạc"> Âm nhạc-->
+<!--                <input type="radio" name="gender" value="đọc sách"> Đọc sách <br>-->
+<!--                <p></p>-->
+<!--                <input type="radio" name="gender" value="thể thao" checked> Thể thao-->
+<!--                <input type="radio" name="gender" value="âm nhạc"> Âm nhạc-->
+<!--                <input type="radio" name="gender" value="đọc sách"> Đọc sách <br>-->
+<!--                <p> </p>-->
+<!--                <input type="Submit" value="Gửi thông tin">-->
+<!--                <input type="Submit" value="Nhập lại">-->
+
+
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

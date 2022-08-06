@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        .div4 {
+            position: absolute;
+            top: 200px;
+        }
+        .display {
+            width: 100px;
+            height: 25px;
+            background: burlywood;
+            position: absolute;
+            left: 200px;
+            top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form action="" name="dataform">
+            <div class="div1">
+                <label for="so">Nhập số tiền cần chuyển:</label><br>
+                <input type="text" name="amount" id="so">
+            </div>
+            <div class="div2">
+                <p> From Currency:</p>
+                <select id="Form">
+                    <option value="VND"> VND</option>
+                    <option value="USD"> USD</option>
+                </select>
+            </div>
+            <div class="div3">
+                <p> From Currency:</p>
+                <select id="To">
+                    <option value="VND"> VND</option>
+                    <option value="USD"> USD</option>
+                </select>
+            </div>
+            <div class="div4">
+                <input type="button" value="Tranfer" onclick="Tranfer">
+            </div>
+            <div class="display"></div>
+
+
+        </form>
+    </section>
+
+</body>
+<script src="chuyen_doi_tien_te.js"></script>
+</html>
