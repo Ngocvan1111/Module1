@@ -1,0 +1,19 @@
+.cl1 {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#From {
+    width: 100px;
+    text-align: center;
+}
+#To {
+    width: 100px;
+    text-align: center;
+
+}
+.hienthi {
+    width: 200px;
+    height: 100px;
+    background: aqua;
+}
