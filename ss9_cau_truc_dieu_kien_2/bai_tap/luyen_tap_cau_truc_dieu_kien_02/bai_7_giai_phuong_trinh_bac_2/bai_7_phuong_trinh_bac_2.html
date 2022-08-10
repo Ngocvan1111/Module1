@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+    <style>
+        #display    {
+            width: 250px;
+            height: 30px;
+            background: honeydew;
+            margin-left: 100px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            color: blue;
+
+
+        }
+        #ip1,#ip2,#ip3 {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="" name="dataform" id="frm">
+    <label>Nhập  a: <input type="text" name="soa" id="ip1" placeholder="nhập here"></label> <br>
+    <label>Nhập  b: <input type="text" name="sob" id="ip2" placeholder="nhập here"></label><br>
+    <label>Nhập  c: <input type="text" name="soc" id="ip3" placeholder="nhập here"></label>
+    <input type="button"  value="Caculating" id="but" onclick="tinh()">
+    <div id="display">Đây là nơi hiện kết quả</div>
+
+</form>
+</body>
+<script>
+    function tinh() {
+        let a = parseFloat(document.dataform.soa.value);
+        let b = parseFloat(document.dataform.sob.value);
+        let c = parseFloat(document.dataform.soc.value);
+        let Delta ;
+        Delta = (Math.pow(b,2)- 4*a*c);
+        if (Delta < 0) {
+            document.getElementById("display").innerHTML = "Phương trình vô số nghiệm ";
+        } else if ( Delta === 0) {
+            document.getElementById("display").innerHTML = "Phương trình có nghiệm kép là: x1 = x2 = " + ((-b)/(2*a)) ;
+        }
+        else {
+            document.getElementById("display").innerHTML = "Phương trình có nghiệm kép là: x1 = " + (((-b)+(Math.sqrt(Delta)))/(2*a)).toFixed(2) + "  | x2= " + (((-b)-(Math.sqrt(Delta)))/(2*a)).toFixed(2) ;
+
+
+        }
+
+
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+    <style>
+        #display    {
+            width: 200px;
+            height: 30px;
+            background: grey;
+            margin-left: 10px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="dataform" id="frm">
+        <label> <input type="text" name="doc" id="ip1"></label>
+        <input type="button"  value="Chuyển đổi" id="but" onclick="tranfer()">
+        <div id="display">Đây là nơi hiện kết quả</div>
+
+    </form>
+</body>
+<script>
+    function tranfer() {
+        let C = parseFloat(document.dataform.doc.value);
+        let F ;
+         F = ((C*9)/5 + 32);
+        document.getElementById("display").innerHTML = "Nhiệt độ F là" + F;
+
+    }
+
+
+</script>
+</html>

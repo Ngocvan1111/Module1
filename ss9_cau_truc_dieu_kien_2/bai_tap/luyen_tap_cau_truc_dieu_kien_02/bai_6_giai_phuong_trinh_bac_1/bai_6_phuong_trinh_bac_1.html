@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình tam giac vuông</title>
+    <style>
+        #display    {
+            width: 250px;
+            height: 30px;
+            background: honeydew;
+            margin-left: 100px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            color: blue;
+
+
+        }
+        #ip1,#ip2 {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="" name="dataform" id="frm">
+    <label>Nhập  a: <input type="text" name="canha" id="ip1" placeholder="nhập here"></label> <br>
+    <label>Nhập  b: <input type="text" name="canhb" id="ip2" placeholder="nhập here"></label>
+    <input type="button"  value="Caculating" id="but" onclick="tinh()">
+    <div id="display">Đây là nơi hiện kết quả</div>
+
+</form>
+</body>
+<script>
+    function tinh() {
+        let a = parseFloat(document.dataform.canha.value);
+        let b = parseFloat(document.dataform.canhb.value);
+        let x ;
+        x = (-b)/a;
+        if (a === 0) {
+            if (b === 0){
+                document.getElementById("display").innerHTML = "Phương trình vô số nghiệm ";
+
+            }
+            else {
+                document.getElementById("display").innerHTML = "Phương trình vô nghiệm ";
+
+            }
+        }
+        else  {
+            document.getElementById("display").innerHTML = "Phương trình có nghiệm là: " + x;
+
+        }
+
+
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,14 @@
+#display {
+    position: relative;
+    width: 400px;
+    margin: auto;
+    margin-top: -200px;
+}
+#nut {
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+}
+#nut:hover {
+    background: blue;
+}

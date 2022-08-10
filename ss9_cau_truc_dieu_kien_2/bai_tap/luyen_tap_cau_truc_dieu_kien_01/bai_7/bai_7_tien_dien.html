@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiền điện thoại</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    let sophut = parseFloat(prompt("Số phút liên hệ: "))
+    if (sophut > 100) {
+        alert("Giá cước cuộc gọi của bạn là : " + (sophut*1500 )+ "VND")
+
+    }
+     else if (sophut > 60) {
+        alert("Giá cước cuộc gọi của bạn là : " + (sophut*1700 )+ "VND")
+
+    }
+    else if (sophut > 20) {
+        alert("Giá cước cuộc gọi của bạn là : " + (sophut*2000 )+ "VND")
+
+    }
+    else {
+        alert("Giá cước cuộc gọi của bạn là : " + (sophut*2400)+ "VND")
+
+    }
+</script>
+</html>

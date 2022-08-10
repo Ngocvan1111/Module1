@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá trị lớn nhất của 3 số nguyên</title>
+</head>
+<body>
+<section>
+    <form action="" name="dataform" id="frm">
+        <label for="soa">Nhập vào số a:<input type="text" name="soa" id="soa"></label>
+        <label for="sob">Nhập vào số b:<input type="text" name="sob" id="sob"></label>
+        <label for="soc">Nhập vào số c:<input type="text" name="soc" id="soc"></label>
+        <input type="button" value="Tìm số lớn nhất" onclick="fine()">
+    </form>
+</section>
+
+</body>
+<script>
+    function fine () {
+        let a = parseFloat(document.dataform.soa.value);
+        let b = parseFloat(document.dataform.sob.value);
+        let c = parseFloat(document.dataform.soc.value);
+        if (a > b) {
+            if (a > c) {
+                alert(a + " là số lớn nhất");
+            }
+                if(c > a) {
+                    alert(c + " Là số lớn nhất");
+                }
+        }
+        else if (b > c) {
+            alert(b + " là số lớn nhất");
+        }
+        else {
+            alert(c + " là số lớn nhất");
+        }
+
+
+
+
+    }
+
+</script>
+</html>

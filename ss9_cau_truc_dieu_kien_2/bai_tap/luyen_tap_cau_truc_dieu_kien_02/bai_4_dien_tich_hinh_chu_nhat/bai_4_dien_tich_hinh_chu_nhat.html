@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình chữ nhật</title>
+    <style>
+        #display    {
+            width: 200px;
+            height: 30px;
+            background: grey;
+            margin-left: 100px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            color: blue;
+
+
+        }
+        #ip1,#ip2 {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="" name="dataform" id="frm">
+    <label>Nhập vào chiều dài cạnh a: <input type="text" name="canha" id="ip1" placeholder="nhập here"></label> <br>
+    <label>Nhập vào chiều dài cạnh b: <input type="text" name="canhb" id="ip2" placeholder="nhập here"></label>
+    <input type="button"  value="Caculating" id="but" onclick="tinh()">
+    <div id="display">Đây là nơi hiện kết quả</div>
+
+</form>
+</body>
+<script>
+    function tinh() {
+        let a = parseFloat(document.dataform.canha.value);
+        let b = parseFloat(document.dataform.canhb.value);
+        let dt ;
+        dt = a*b;
+        document.getElementById("display").innerHTML = "Kết quả : " + dt;
+
+    }
+
+
+</script>
+</html>

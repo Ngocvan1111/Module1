@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tuổi vào lớp 10</title>
+</head>
+<body>
+<form action="" name="dataform">
+        <label>Nhập tuổi: <input type="text" name="tuoi" id="age"></label>
+        <input type="button" value="Kiểm tra" onclick="kiemtra() ">
+    </form>
+</body>
+<script>
+    function kiemtra() {
+        let age = parseFloat(document.dataform.tuoi.value);
+        if (age < 15) {
+            alert(" Chưa đủ tuổi lên lớn 10");
+        }
+        else {
+            alert(" Chúc mừng bạn đã đủ tuổi lên lớp 10");
+        }
+    }
+</script>
+</html>

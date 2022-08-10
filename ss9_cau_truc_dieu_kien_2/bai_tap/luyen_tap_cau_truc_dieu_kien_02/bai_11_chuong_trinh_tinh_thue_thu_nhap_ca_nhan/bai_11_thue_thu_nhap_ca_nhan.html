@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuế thu nhập cá nhân</title>
+    <style>
+        #display    {
+            width: 250px;
+            height: 30px;
+            background: honeydew;
+            margin-left: 100px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            color: blue;
+
+
+        }
+        #ip1, #ip2 {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="" name="dataform" id="frm">
+    <label> Tiền lương (VNĐ) : <input type="text" name="luong" id="ip1" placeholder="nhập here"></label> <br>
+    <label> Số người phụ thuộc : <input type="number" name="nb" id="ip2" placeholder="nhập here"></label> <br>
+    <input type="button"  value="Caculating" id="but" onclick="tinh()">
+    <div id="display">Đây là nơi hiện kết quả</div>
+
+</form>
+</body>
+<script>
+    function tinh() {
+        let tienluong = parseFloat(document.dataform.luong.value);
+        let nguoipt = parseFloat(document.dataform.nb.value);
+        let tntt ; // số tiền thu nhập tính thuế
+        let baohiem = tienluong*0.105 ; // Tiền đóng bảo hiểm
+        let thue ;
+
+        tntt = (tienluong - 11 - nguoipt*4.4 - baohiem) //
+        // Tính thuế
+        if (80 < tntt){
+            thue = ((tntt*0.35) - 9.85) ;
+        }
+        else if (52 < tntt){
+           thue = ((tntt*0.3) - 5.85) ;
+        }
+        else if (32 < tntt){
+            thue = ((tntt*0.25) - 3.25) ;
+        }
+        else if (18 < tntt){
+            thue = ((tntt*0.2) - 1.65) ;
+        }
+        else  {
+            thue = ((tntt*0.15) - 0.75) ;
+        }
+
+        //xuất kết quả
+        if (thue > 0) {
+            document.getElementById("display").innerHTML = "Tiền thuế: "+ thue + " Triệu VNĐ";
+        }
+        else {
+            document.getElementById("display").innerHTML = "Tiền thuế: 0 VNĐ";
+
+        }
+
+
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem_tra_canh_tam_giac</title>
+    <style>
+        #display    {
+            width: 250px;
+            height: 30px;
+            background: honeydew;
+            margin-left: 100px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            color: blue;
+
+
+        }
+        #ip1,#ip2,#ip3 {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="" name="dataform" id="frm">
+    <label>Nhập  a: <input type="text" name="soa" id="ip1" placeholder="nhập here"></label> <br>
+    <label>Nhập  b: <input type="text" name="sob" id="ip2" placeholder="nhập here"></label><br>
+    <label>Nhập  c: <input type="text" name="soc" id="ip3" placeholder="nhập here"></label>
+    <input type="button"  value="Caculating" id="but" onclick="tinh()">
+    <div id="display">Đây là nơi hiện kết quả</div>
+
+</form>
+</body>
+<script>
+    function tinh() {
+        let a = parseFloat(document.dataform.soa.value);
+        let b = parseFloat(document.dataform.sob.value);
+        let c = parseFloat(document.dataform.soc.value);
+        let t1 = a + b;
+        let t2 = b + c;
+        let t3 = a + c;
+
+        if ( a > 0 && b > 0 && c > 0 && t1 > c && t2 > a && t3 > b) {
+            document.getElementById("display").innerHTML = "Ta có a, b, c là các cạnh của 1 tam giác ";
+
+        }
+        else {
+            document.getElementById("display").innerHTML = "Ta có a, b, c không phải là các cạnh của 1 tam giác ";
+
+        }
+
+
+    }
+
+
+</script>
+</html>

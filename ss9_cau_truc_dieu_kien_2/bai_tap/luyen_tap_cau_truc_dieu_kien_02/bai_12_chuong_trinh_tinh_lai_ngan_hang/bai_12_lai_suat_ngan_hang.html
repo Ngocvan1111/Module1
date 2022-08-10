@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi suất ngân hàng theo tháng</title>
+    <style>
+        #display    {
+            width: 250px;
+            height: 30px;
+            background: honeydew;
+            margin-left: 100px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            color: blue;
+
+
+        }
+        #ip1{
+            margin: 10px;
+        }
+        #ip2 {
+            margin-left: 23px;
+        }
+
+    </style>
+</head>
+<body>
+<form action="" name="dataform" id="frm">
+    <label> Số tiền gốc : <input type="text" name="tiengoc" id="ip1" placeholder="nhập here"></label> <br>
+    <label> Số tháng : <input type="number" name="nb" id="ip2" placeholder="nhập here"></label> <br>
+    <input type="button"  value="Caculating" id="but" onclick="tinh()">
+    <div id="display">Đây là nơi hiện kết quả</div>
+
+</form>
+</body>
+<script>
+    function tinh() {
+        let tiengoc  = parseFloat(document.dataform.tiengoc.value);
+        let thanggui = parseFloat(document.dataform.nb.value);
+        let lai;
+        lai = tiengoc*Math.pow((1+0.0028),thanggui) - tiengoc;
+        document.getElementById("display").innerHTML = "Tiền lãi sau "+ thanggui + " tháng là :"+ lai + " Triệu VNĐ";
+
+
+    }
+
+
+</script>
+</html>

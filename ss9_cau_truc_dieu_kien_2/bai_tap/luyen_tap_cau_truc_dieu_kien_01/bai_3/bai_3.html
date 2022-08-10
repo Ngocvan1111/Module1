@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<form action="" name="dataform">
+    <label>Nhập số: <input type="text" name="so" id="numb"></label>
+    <input type="button" value="Kiểm tra" onclick="kiemtra() ">
+</form>
+</body>
+<script>
+    function kiemtra() {
+        let number = parseFloat(document.dataform.so.value);
+        if (number > 0) {
+            alert(" Số lớn hơn 0");
+        }
+        else {
+            alert(" Số nhỏ hơn 0");
+        }
+    }
+</script>
+</html>

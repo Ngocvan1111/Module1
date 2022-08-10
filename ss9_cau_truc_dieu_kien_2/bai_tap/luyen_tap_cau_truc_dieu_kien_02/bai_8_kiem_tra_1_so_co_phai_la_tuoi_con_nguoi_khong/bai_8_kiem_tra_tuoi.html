@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra xem phải tuổi của con người không</title>
+    <style>
+        #display    {
+            width: 250px;
+            height: 30px;
+            background: honeydew;
+            margin-left: 100px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            color: blue;
+
+
+        }
+        #ip1 {
+            margin: 10px;
+        }
+        #but {
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+<form action="" name="dataform" id="frm">
+    <label>Nhập tuổi : <input type="text" name="tuoi" id="ip1" placeholder="nhập here"></label> <br>
+
+    <input type="button"  value="Caculating" id="but" onclick="kiemtra()">
+    <div id="display">Đây là nơi hiện kết quả</div>
+
+</form>
+</body>
+<script>
+    function kiemtra() {
+        let a = parseInt(document.dataform.tuoi.value);
+        if ( 0 < a && a < 120) {
+            document.getElementById("display").innerHTML = "Đây là tuổi của con người ";
+        }
+        else {
+            document.getElementById("display").innerHTML = "Đây không phải tuổi của người ";
+        }
+    }
+
+
+</script>
+</html>

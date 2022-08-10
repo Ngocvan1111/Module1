@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra chia hết a, b</title>
+</head>
+<body>
+<section>
+    <form action="" name="dataform">  <label id="lb1">Nhập vào số a:<input type="text" name="soa"> </label>
+        <label id="lb2">Nhập vào số b:<input type="text" name="sob"></label>
+        <input type="button" value="kiểm tra" onclick="kiemtra()"/>  </form>
+</section>
+
+</body>
+<script>
+    function kiemtra() {
+        var a = parseFloat(document.dataform.soa.value);
+        var b  = parseFloat(document.dataform.sob.value);
+        if ( a % b == 0) {
+            alert("Số a chia hết cho b");
+        }
+        else {
+            alert("số a không chia hết cho b");
+        }
+
+    }
+
+</script>
+</html>

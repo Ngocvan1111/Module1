@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi đơn vị</title>
+    <style>
+        #display    {
+            width: 200px;
+            height: 30px;
+            background: grey;
+            margin-left: 10px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            color: blue;
+
+
+        }
+    </style>
+</head>
+<body>
+<form action="" name="dataform" id="frm">
+    <label> <input type="text" name="met" id="ip1"></label>
+    <input type="button"  value="Chuyển đổi" id="but" onclick="tranfer()">
+    <div id="display">Đây là nơi hiện kết quả</div>
+
+</form>
+</body>
+<script>
+    function tranfer() {
+        let m = parseFloat(document.dataform.met.value);
+        let f ;
+        f = m*3.2808;
+        document.getElementById("display").innerHTML = "Kết quả : " + f;
+
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+<body>
+    <section>
+        <form action="" name="dataform" id="frm">
+            <label for="chieucao"><b>Nhập chiều cao:</b></label>
+            <input type="text" name="h" id="chieucao" placeholder="Nhập đơn vị met"/>
+            <label for="cannang"><b>Nhập cân nặng:</b></label>
+            <input type="text" name="w" id="cannang" placeholder="Nhập đơn vị Kg"/>
+            <input type="button" value="Kiểm tra" id="buton"  style="cursor: pointer" onclick="kiemtra()">
+        </form>
+    </section>
+
+</body>
+<script>
+    function kiemtra() {
+        let chieucao = parseFloat(document.dataform.h.value);
+        let cannang = parseFloat(document.dataform.w.value);
+        let BMI = (cannang/(Math.pow(chieucao,2)));
+        if (BMI < 18.5) {
+            alert("Underweight");
+        }
+        else if (BMI < 25.0) {
+            alert("Normal")
+        }
+        else if (BMI < 30.0) {
+            alert("Overweight")
+
+        }
+        else {
+                alert("Obese")
+        }
+
+    }
+</script>
+</html>

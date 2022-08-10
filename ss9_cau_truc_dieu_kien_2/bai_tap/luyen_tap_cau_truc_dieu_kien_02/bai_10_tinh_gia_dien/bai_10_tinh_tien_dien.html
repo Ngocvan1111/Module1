@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+    <style>
+        #display    {
+            width: 250px;
+            height: 30px;
+            background: honeydew;
+            margin-left: 100px;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            color: blue;
+
+
+        }
+        #ip1 {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="" name="dataform" id="frm">
+    <label> Số điện (KW): <input type="text" name="sodien" id="ip1" placeholder="nhập here"></label> <br>
+    <input type="button"  value="Caculating" id="but" onclick="tinh()">
+    <div id="display">Đây là nơi hiện kết quả</div>
+
+</form>
+</body>
+<script>
+    function tinh() {
+        let sodien = parseFloat(document.dataform.sodien.value);
+
+        if (sodien > 400) {
+            document.getElementById("display").innerHTML = "Tiền điện tháng này là: " + (sodien * 2927) + " VNĐ";
+        }
+        else if (sodien > 300 ) {
+            document.getElementById("display").innerHTML = "Tiền điện tháng này là: " + (sodien * 2834) + " VNĐ";
+        }
+        else if (sodien > 200 ) {
+            document.getElementById("display").innerHTML = "Tiền điện tháng này là: " + (sodien * 2236) + " VNĐ";
+        }
+        else if (sodien > 100 ) {
+            document.getElementById("display").innerHTML = "Tiền điện tháng này là: " + (sodien * 2014) + " VND";
+        }
+        else if (sodien > 50 ) {
+            document.getElementById("display").innerHTML = "Tiền điện tháng này là: " + (sodien * 1734) + " VNĐ";
+        }
+        else {
+            document.getElementById("display").innerHTML = "Tiền điện tháng này là: " + (sodien * 1678) +  " VNĐ";
+
+        }
+
+    }
+
+
+</script>
+</html>
