@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 20 số đầu tiên</title>
+</head>
+<body>
+<script>
+    let n1 = 0;
+    let n2 = 1;
+    let fibonacii = 0;
+    let i;
+    let sum20 = 0;
+    for (i = 0; i < 20 ; i++ ) {
+        fibonacii = n2 + n1;
+        sum20 += fibonacii;
+        n1 = n2;
+        n2 = fibonacii;
+    }
+    alert("tổng 20 số đầu tiên:"+ sum20);
+</script>
+
+
+</body>
+</html>

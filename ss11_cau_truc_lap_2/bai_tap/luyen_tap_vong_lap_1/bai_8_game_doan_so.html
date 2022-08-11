@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game_doan_so</title>
+</head>
+<body>
+<input type="button" value="Start game" onclick="startgame()">
+<script>
+    function startgame() {
+        let playerInputRank = parseInt(prompt("nhập phạm vi số bạn muốn chơi:"));
+        let numberRandom = Math.floor(Math.random()*playerInputRank);
+        let count = 0;
+        let remember = true;
+        do {
+            let playerInput = parseInt(prompt("Nhập số bạn nghĩ là nó đúng:"));
+            if (playerInput < numberRandom) {
+                alert("số bạn quá nhỏ")
+                count++;
+            }
+            else if (playerInput > numberRandom) {
+                alert("Số bạn đoán quá lớn")
+                count++;
+            }
+            else if (playerInput === numberRandom) {
+                alert("Chúc mừng bạn đã đoán trúng:")
+                count++;
+                remember = false;
+                break;
+            }
+            else {
+                alert("Mời bạn nhập lại:")
+
+            }
+
+        } while (count < 3);
+        if (remember) {
+            alert("Chúc bạn may mắn lần sau")
+        }
+    }
+
+</script>
+</body>
+</html>

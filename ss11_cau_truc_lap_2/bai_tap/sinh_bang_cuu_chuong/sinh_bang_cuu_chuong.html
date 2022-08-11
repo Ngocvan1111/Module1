@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+</head>
+<body>
+<script>
+    let cout, i , j;
+    cout = "<table border='1' width='1000px' cellspacing='3px' cellpadding='3px' >"
+    i = 1;
+    j = 2;
+    while ( i <=10 ) {
+        cout = cout + "<tr>"
+        while ( j <= 9 ) {
+            cout = cout + "<td>" + j + "x" + i + "=" + i*j + "</td>";
+            j++;
+        }
+        cout = cout + "</tr>"
+        j = 2;
+        i ++;
+    }
+    cout = cout + "</table>"
+    document.write(cout);
+
+</script>
+
+
+</body>
+</html>
