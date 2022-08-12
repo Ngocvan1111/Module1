@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+
+</body>
+<script>
+    let i = 1;
+    let j = 21;
+    // let count = 0;
+    let cout = "<table border='0' width='3'  cellspacing='3' cellpadding='0'>"
+    for (i ; i<=7; i++) {
+        cout = cout + "<tr>";
+        if (i === 1 || i === 7) {
+            for (j =1; j <= 21; j++) {
+                cout = cout + "<td>" + "*" + "</td>"
+            }
+        }
+        else { while (21 >= j ) {
+            if ( j === 1 || j === 21) {
+                cout = cout + "<td>" + "*" + "</td>"; //document.write("&#160");
+            }
+            else {
+                cout = cout + "<td>" + " " + "</td>"; //document.write("*");
+            }
+
+            j++;
+        }}
+        j = 1;
+        cout = cout + "</tr>"
+        // document.write("<br>");
+    }
+    cout = cout + "</table>"
+    document.write(cout);
+
+
+</script>
+
+</html>

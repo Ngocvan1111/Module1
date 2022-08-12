@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam giác vuông</title>
+</head>
+<body>
+<script>
+    //Vị trí góc vuông 1
+    // let i = 1;
+    // let j = 1;
+    // for (i ; i<=5; i++) {
+    //     while (j <=i) {
+    //         document.write("*");
+    //         j++;
+    //     }
+    //     j = 1;
+    //     document.write("<br>");
+    // }
+    // Vị trí góc vuông 2
+    // let i = 1;
+    // let j = 5;
+    // for (i ; i<=5; i++) {
+    //     while (j >= i) {
+    //         document.write("*");
+    //         j--;
+    //     }
+    //     j = 5;
+    //     document.write("<br>");
+    // }
+    // Vị trí góc vuông 3
+    // let i = 1;
+    // let j = 1;
+    // let cout = "<table border='0' width='3'  cellspacing='3' cellpadding='0'>"
+    // for (i ; i<=5; i++) {
+    //     cout = cout + "<tr>";
+    //     while (5 >= j ) {
+    //         if (j <= (5 - i) ) {
+    //            cout = cout + "<td>" + " " + "</td>"; //document.write("&#160");
+    //         }
+    //         else {
+    //             cout = cout + "<td>" + "*" + "</td>"; //document.write("*");
+    //         }
+    //         j++;
+    //     }
+    //     j = 1;
+    //     cout = cout + "</tr>"
+    //     // document.write("<br>");
+    // }
+    // cout = cout + "</table>"
+    // document.write(cout);
+    // Vị trí góc vuông 4
+    let i = 1;
+    let j = 1;
+    let count = 0;
+    let cout = "<table border='0' width='3'  cellspacing='3' cellpadding='0'>"
+    for (i ; i<=5; i++) {
+        cout = cout + "<tr>";
+        while (5 >= j ) {
+            if (count < j  ) {
+                cout = cout + "<td>" + "*" + "</td>"; //document.write("&#160");
+            }
+            else {
+                cout = cout + "<td>" + " " + "</td>"; //document.write("*");
+            }
+
+            j++;
+        }
+        count ++;
+        j = 1;
+        cout = cout + "</tr>"
+        // document.write("<br>");
+    }
+    cout = cout + "</table>"
+    document.write(cout);
+
+
+</script>
+</body>
+</html>

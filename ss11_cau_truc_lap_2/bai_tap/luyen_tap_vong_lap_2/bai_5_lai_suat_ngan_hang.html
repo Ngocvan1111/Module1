@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi suất ngân hàng</title>
+</head>
+<body>
+
+</body>
+<script>
+    let tienGui = parseFloat(prompt("Số tiền gửi là:"));
+    let thangGui = parseFloat(prompt("Số tháng gửi"));
+    let i;
+    let tienLai = 0;
+    let laiSuat = 0.28;
+    for (i = 1; i <= thangGui; i++ ) {
+        tienLai = tienGui*laiSuat;
+        tienGui += tienLai;
+    }
+    alert("Lãi suất là:" + tienLai);
+</script>
+</html>
