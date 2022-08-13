@@ -14,32 +14,83 @@
            <input type="text" class="result" id="resultInput">
         </div>
         <div class="buttons">
-            <button class="button" onclick="buttonHandler(this)">1</button>
-            <button class="button" onclick="buttonHandler(this)">2</button>
-            <button class="button" onclick="buttonHandler(this)">3</button>
-            <button class="button" onclick="buttonHandler(this)">+</button>
+            <button class="button" onclick="button1()">1</button>
+            <button class="button" onclick="button2()">2</button>
+            <button class="button" onclick="button3()">3</button>
+            <button class="button" onclick="buttonCong()">+</button>
         </div>
         <div class="buttons">
-            <button class="button" onclick="buttonHandler(this)">4</button>
-            <button class="button" onclick="buttonHandler(this)">5</button>
-            <button class="button" onclick="buttonHandler(this)">6</button>
-            <button class="button" onclick="buttonHandler(this)">-</button>
+            <button class="button" onclick="button4()">4</button>
+            <button class="button" onclick="button5()">5</button>
+            <button class="button" onclick="button6()">6</button>
+            <button class="button" onclick="buttonTru()">-</button>
         </div>
         <div class="buttons">
-            <button class="button" onclick="buttonHandler(this)">7</button>
-            <button class="button" onclick="buttonHandler(this)">8</button>
-            <button class="button" onclick="buttonHandler(this)">9</button>
-            <button class="button" onclick="buttonHandler(this)">x</button>
+            <button class="button" onclick="button7()">7</button>
+            <button class="button" onclick="button8()">8</button>
+            <button class="button" onclick="button9()">9</button>
+            <button class="button" onclick="buttonNhan()">x</button>
         </div>
         <div class="buttons">
-            <button class="button" onclick="buttonHandler(this)">C</button>
-            <button class="button" onclick="buttonHandler(this)">0</button>
-            <button class="button" onclick="buttonHandler(this)">=</button>
-            <button class="button" onclick="buttonHandler(this)">/</button>
+            <button class="button" onclick="buttonC()">C</button>
+            <button class="button" onclick="button0()">0</button>
+            <button class="button" onclick="buttonBang()">=</button>
+            <button class="button" onclick="buttonChia()">/</button>
         </div>
     </div>
 
 
 </body>
-<script src="may_tinh.js"></script>
+<script>
+    function button1() {
+        document.getElementById("resultInput").value += 1;
+    }
+    function button2() {
+        document.getElementById("resultInput").value += 2;
+    }
+    function button3() {
+        document.getElementById("resultInput").value += 3;
+    }
+    function button4() {
+        document.getElementById("resultInput").value += 4;
+    }
+    function button5() {
+        document.getElementById("resultInput").value += 5;
+    }
+    function button6() {
+        document.getElementById("resultInput").value += 6;
+    }
+    function button7() {
+        document.getElementById("resultInput").value += 7;
+    }
+    function button8() {
+        document.getElementById("resultInput").value += 8;
+    }
+    function button9() {
+        document.getElementById("resultInput").value += 9;
+    }
+    function buttonCong() {
+        document.getElementById("resultInput").value += "+";
+    }
+    function buttonTru() {
+        document.getElementById("resultInput").value += "-";
+    }
+    function buttonNhan() {
+        document.getElementById("resultInput").value += "*";
+    }
+    function buttonChia() {
+        document.getElementById("resultInput").value += "/";
+    }
+    function button0() {
+        document.getElementById("resultInput").value += 0;
+    }
+    function buttonBang() {
+       let output =  document.getElementById("resultInput").value;
+       let result = eval(output);
+       document.getElementById("resultInput").value = output + " = " +result;
+    }
+    function buttonC() {
+        document.getElementById("resultInput").value = "";
+    }
+</script>
 </html>
