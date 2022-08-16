@@ -6,17 +6,22 @@
 </head>
 <body>
 <script>
-    let nhietDo = null;
+    let nhietDo = parseFloat(prompt("nhập nhiệt độ: "));
+    let nhiet = false;
     do {
-        nhietDo = prompt("nhập nhiệt độ");
-        if (nhietDo < 20) {
-            alert("Tăng nhiệt độ please!");
-        }
-        if (nhietDo > 100) {
-            alert("Giảm nhiệt độ please!");
-        }
-    } while (nhietDo < 20 || nhietDo > 100);
-
+    if (nhietDo < 20 ) {
+        alert("Tăng nhiệt độ please! ");
+        nhietDo = prompt("nhập nhiệt độ: ")
+    }
+    else if (nhietDo > 100) {
+        alert("Giảm nhiệt độ please! ")
+        nhietDo = prompt("nhập nhiệt độ: ")
+    }
+    else {
+        alert("Nhiệt độ đã được cài đặt: " + nhietDo)
+        nhiet = true;
+    }
+    } while (!(nhiet));
 </script>
 
 

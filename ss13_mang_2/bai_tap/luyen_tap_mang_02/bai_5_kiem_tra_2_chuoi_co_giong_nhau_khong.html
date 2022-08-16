@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh 2 chuỗi</title>
+</head>
+<body>
+
+</body>
+<script>
+    let string1 = prompt("Nhập vào chuỗi 1");
+    let string2 = prompt("Nhập vào chuỗi 2");
+    //Cách 1
+    // if (string1==string2) {
+    //     document.write("2 Chuỗi giống nhau");
+    // }
+    // else {
+    //     document.write("2 Chuỗi không giống nhau");
+    //
+    //
+    // }
+    //Cách 2
+    let arrs1 = string1.split('');
+    let arrs2 = string2.split('');
+    let ketqua = true;
+    for (let i = 0,j = 0; i<arrs1.length,j<arrs2.length;i++,j++) {
+        if (arrs1[i] !== arrs2[j]) {
+            ketqua = false
+        }
+    }
+    if (ketqua) {
+        document.write(" 2 chuỗi giống nhau :")
+    }
+    else {
+        document.write("2 chuỗi này khác nhau:")
+    }
+</script>
+</html>

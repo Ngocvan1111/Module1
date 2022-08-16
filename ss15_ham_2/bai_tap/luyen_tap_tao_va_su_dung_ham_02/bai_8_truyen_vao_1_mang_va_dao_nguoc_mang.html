@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    function daoNguocMang(arrayy) {
+        let first = 0;
+        let last = arrayy.length-1;
+        let bridge = "";
+        while (first < last) {
+            bridge =  arrayy[first];
+            arrayy[first] = arrayy[last];
+            arrayy[last] = bridge;
+            first++;
+            last --;
+        }
+        return arrayy;
+    }
+    let arr = [];
+    let n = prompt("Nhập chiều dài mảng: ");
+    for (let i = 0; i < n; i++) {
+        let elementt = prompt("Nhập phần tử của mảng");
+        arr.push(elementt);
+    }
+    // console.log(arr)
+
+    let result = daoNguocMang(arr);
+    document.write(result);
+
+
+</script>
+
+</body>
+</html>

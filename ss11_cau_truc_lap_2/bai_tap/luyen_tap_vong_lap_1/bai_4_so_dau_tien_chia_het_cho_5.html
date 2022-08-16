@@ -9,17 +9,12 @@
     let n1 = 0;
     let n2 = 1;
     let fibonacii = 0;
-    let i =0 ;
-    for (; ; i++ ) {
+    do{
         fibonacii = n2 + n1;
-        n1 = n2;
-        n2 = fibonacii;
-        if (fibonacii%5 === 0) {
-            alert(fibonacii)
-            break;
-        }
-
-    }
+            n1 = n2;
+            n2 = fibonacii;
+    } while (fibonacii % 5 !== 0)
+    alert("Số đầu tiên chia hết 5 là: " + fibonacii)
 </script>
 
 

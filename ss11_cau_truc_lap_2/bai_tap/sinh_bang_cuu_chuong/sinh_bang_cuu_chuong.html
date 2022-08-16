@@ -6,22 +6,23 @@
 </head>
 <body>
 <script>
-    let cout, i , j;
-    cout = "<table border='1' width='1000px' cellspacing='3px' cellpadding='3px' >"
-    i = 1;
-    j = 2;
+    let count;
+
+    count = "<table border='1' width='1000px' cellspacing='3px' cellpadding='3px' >"
+    let  i = 1;
+    let   j = 2;
     while ( i <=10 ) {
-        cout = cout + "<tr>"
+        count = count + "<tr>"
         while ( j <= 9 ) {
-            cout = cout + "<td>" + j + "x" + i + "=" + i*j + "</td>";
+            count = count + "<td>" + j + "x" + i + "=" + i*j + "</td>";
             j++;
         }
-        cout = cout + "</tr>"
+        count = count + "</tr>"
         j = 2;
         i ++;
     }
-    cout = cout + "</table>"
-    document.write(cout);
+    count = count + "</table>"
+    document.write(count);
 
 </script>
 

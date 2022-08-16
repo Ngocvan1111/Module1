@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>tranfer to switch case</title>
 </head>
 <body>
-$END$
+
+
 </body>
+<script>
+    var number = parseFloat( prompt('Type a number',0));
+  if (number > 0) {
+      var isNumber = 0;
+  }
+  else if (number < 0) {
+      var isNumber = 1;
+  }
+  else {
+      var isNumber = 0;
+  }
+
+
+    switch (isNumber) {
+        case 0:
+            alert("1");
+            break;
+        case  1 :
+            alert("-1");
+            break;
+        case 2 :
+            alert('0');
+            break;
+
+
+    }
+</script>
 </html>

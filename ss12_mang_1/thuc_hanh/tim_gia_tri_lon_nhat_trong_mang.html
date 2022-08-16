@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tìm số lớn nhất</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    let arrayy = [4,3,11,22,33,44,55,222,3,4,2,24,34234,234,3];
+    let max = arrayy[0];
+    let i =1;
+    for (i; i <= arrayy.length ; i ++) {
+        if (max < arrayy[i]) {
+            max = arrayy[i]
+        }
+    }
+    document.write("Số lớn nhất trong mảng là " + max + " tại vị trí " + i)
+
+</script>
 </html>

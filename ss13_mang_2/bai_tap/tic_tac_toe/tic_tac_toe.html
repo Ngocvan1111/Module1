@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="tictactoe" />
+    <label><input type="button" value="play" onclick="changeValue()"></label>
+
+</body>
+    <script>
+        let board = [];
+        let data = "";
+        var turn = true;
+        for ( let i = 0; i<5; i++) {
+            board[i] = [".",".",".",".","."];
+        }
+        for (let i = 0; i<5;i++){
+            data +="<br>";
+            for (let j = 0; j<5;j++){
+                data += board[i][j]+ "&nbsp;&nbsp;&nbsp;"
+            }
+        }
+        data += "<br/><br/><input type='button' value='play' onclick='changeValue()'>"
+        document.getElementById("tictactoe").innerHTML = data;
+        // tạo function
+        function changeValue() {
+            data = "";
+            // var turn = true;
+            if(turn) {
+                let x = prompt("X: ");
+                let y = prompt("Y: ");
+                board[x][y] = "x";
+                if((board[x-1][y]==board[x][y] && board[x-2][y]==board[x][y]) || (board[x][y-2]==board[x][y] && board[x][y-1]==board[x][y])) {
+                    alert("Bên X thắng")
+                }
+                for(let i = 0; i< 5; i++){
+                    data += "<br>"
+                    {
+                        for( let j=0;j<5;j++) {
+                            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                        }
+                    }
+                }
+                turn = false;
+            }
+            else {
+                let x = prompt("X: ");
+                let y = prompt("Y: ");
+                board[x][y] = "y";
+                if((board[x-1][y]==board[x][y] && board[x-2][y]==board[x][y]) || (board[x][y-2]==board[x][y] && board[x][y-1]==board[x][y])) {
+                    alert("Bên y thắng")
+                }
+                for(let i = 0; i< 5; i++){
+                    data += "<br>"
+                    {
+                        for( let j=0;j<5;j++) {
+                            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                        }
+                    }
+                }
+             turn = true;
+            }
+            data += "<br/><br/><input type='button' value='play' onclick='changeValue()'>"
+            document.getElementById("tictactoe").innerHTML = data;
+
+
+        }
+
+    </script>
+</html>

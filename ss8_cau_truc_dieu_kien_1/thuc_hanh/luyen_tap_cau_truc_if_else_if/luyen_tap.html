@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Luyện tập cấu trúc if else if</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+ let input = prompt("Tên đăng nhập:");
+ if (input === "Admin") {
+     let pas = prompt("Nhập password");
+     if (pas === "TheMaster") {
+         alert("Welcome");
+     }
+     else if(pas == null) {
+         alert("Canceled");
+     }
+     else {
+         alert("Wrong password");
+     }}
+ else if (input == null) {
+     alert("Canceled");
+
+     }
+ else {
+     alert("I don't know you");
+ }
+</script>
 </html>

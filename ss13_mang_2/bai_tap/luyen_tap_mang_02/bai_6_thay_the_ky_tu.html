@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay thế ký tự</title>
+</head>
+<body>
+
+</body>
+<script>
+    var arrs = [];
+    // let n = prompt("Nhập vào độ dài mảng");
+    let i =0;
+    let n = prompt("Độ dài của chỗi ");
+    for (i; i < n ;i++) {
+        let iput = prompt("Nhập vào phần tử của mảng");
+        // var iputs =iput.toString();
+        arrs.push(iput);
+    }
+    let result = [arrs[0]];
+    for (let j = 1; j < arrs.length;j++){
+        if (arrs[j] == "-") {
+            result.push("_");
+        }
+        else {
+            result.push(arrs[j]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</html>
+

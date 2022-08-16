@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <h1> Type anything slowly</h1>
+    <form action="" name="dataform">
+        <textarea rows="3" cols="4" name="typeinput" id="typ" maxlength="300px" style="width: 400px; height: 200px; font-size: 40px " onkeydown="tpe()" ></textarea>
+    </form>
+
+
 </body>
+<script>
+    const arrs = [" ","N","g","ọ","c"," ","đ","ẹ","p"," ","t","r","a","i","!"];
+    var tr = [];
+    function tpe() {
+      let t = document.dataform.typeinput.value;
+      var j = t.length;
+      if (j > 0)
+      {
+          for (let i = 1; i<=j; i++){
+              tr += arrs[i];
+              if (i == 15 ){
+                  t = "";
+                  tr = "";
+
+              }
+          }
+
+      }
+      document.dataform.typeinput.value = tr;
+      tr = "";
+        setTimeout("tpe()", 1);
+    }
+</script>
 </html>

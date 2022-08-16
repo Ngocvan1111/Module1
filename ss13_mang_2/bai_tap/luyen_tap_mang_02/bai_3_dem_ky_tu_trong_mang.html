@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm ký tự trong mảng</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    let count = 0;
+    let arrs = [1,2,3,4,5,'7655','a',"abc",10]
+    for ( let j = 0 ;j <arrs.length; j++) {
+         var arr = +arrs[j]
+        if(!(isNaN(arr))){
+            document.write(arr+"<br>")
+            count++;
+        }
+    }
+    document.write("Số ký tự só trong mảng là:" + count)
+</script>
+</html>

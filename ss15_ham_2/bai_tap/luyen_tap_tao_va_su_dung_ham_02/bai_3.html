@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+</body>
+<script>
+    function giaiThua(n) {
+        let result = 1;
+        for (let i = 1; i <= n;i++) {
+            result *= i;
+        }
+        return result;
+    }
+    let numb = prompt("nhập");
+    let results = giaiThua(numb);
+    document.write(results.toString());
+</script>
+</html>

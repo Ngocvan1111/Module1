@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+
+</body>
+<script>
+    var arrs = [];
+    let randon = "";
+    // let i = 0;
+
+    let sum = 0;
+    let average ;
+    // Khởi tạo mảng gồm 10 chữ số
+    for (let i = 1; i<=10;i++){
+        randon = Math.floor(Math.random()*1000);
+        arrs.push(randon);
+    }
+    // Tính toán
+    let j = 0;
+    var max = arrs[0];
+    while (j < arrs.length) {
+        if (max < arrs[j]) {
+            console.log(max)
+            max = arrs[j];
+        }
+        sum += arrs[j];
+        j++;
+    }
+
+    // for(let j = 0; j <arrs.length; j++) {
+    //     if (max < arrs[j]) {
+    //         max = arrs[j];
+    //         console.log(max)
+    //     }
+    // }
+    document.write("Mảng được sinh ra là: "+ arrs + "<br>");
+    document.write("Số lớn nhất là: "+ max + "<br>"+ " Trung bình các phần tử là: " + (sum/j) );
+
+
+
+</script>
+</html>

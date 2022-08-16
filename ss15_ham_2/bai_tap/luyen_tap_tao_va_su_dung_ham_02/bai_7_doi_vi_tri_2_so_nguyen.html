@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi vị trí 2 số nguyên</title>
+</head>
+<body>
+
+</body>
+<script>
+    function switchNumber(a,b) {
+        let bridge = "";
+        bridge = a;
+        a = b;
+        b = bridge;
+        document.write("Số thứ nhất là: "+ a + "<br>");
+        document.write("Số thứ 2 là: " + b);
+    }
+    let num1 = prompt("nhập số thứ nhất:");
+    let num2 = prompt("nhập số thứ 2: ");
+    switchNumber(num1,num2);
+</script>
+</html>

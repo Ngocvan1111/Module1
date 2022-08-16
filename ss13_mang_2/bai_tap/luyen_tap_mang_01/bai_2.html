@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+        const arrs = [22,33,12,11,2,1,16,66,43,19];
+        // let result = [];
+        let positionn
+        let max = arrs[0];
+        console.log(max)
+        let i = 1;
+        while (i < arrs.length) {
+            if (max < arrs[i]) {
+                max = arrs[i]
+                // console.log(max)
+
+                positionn = i;
+            }
+            i ++;
+            console.log(i);
+    }
+        document.write("Số lớn nhất là: "  +max + "<br/>" + " Nằm tại vị trí số : " + positionn);
+
+    </script>
+
+</body>
+</html>

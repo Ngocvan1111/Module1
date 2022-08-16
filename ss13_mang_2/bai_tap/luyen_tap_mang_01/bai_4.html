@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+    <style>
+        #display {
+            width: 400px;
+            height: 200px;
+            background: orange;
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label><input type="text" name="inputtype" id="ip"></label>
+        <input type="button" value="add" id="add" onclick="addArray()">
+        <input type="button" value="daochieu" id="daoChieu" onclick="daoChieuArray()">
+        <div id="display">Đây là vị trí hiện thị mảng </div>
+    </form>
+
+</body>
+    <script>
+        let arrs = [];
+        // let n = "";
+        function addArray() {
+         let iput =  document.getElementById("ip").value;
+         // n += iput + ",";
+         console.log(iput);
+            arrs.push(iput);
+         document.getElementById("display").innerHTML = "Mảng nhập là: " + arrs + "<br>";
+         document.getElementById("ip").value = "";
+
+        }
+        function daoChieuArray() {
+            let first = 0;
+            let last = arrs.length - 1;
+            let b ="";
+            for(let i=0;i<arrs.length/2;i++){
+                b = arrs[first];
+                arrs[first] = arrs[last];
+                arrs[last] = b;
+                first++;
+                last--;
+
+            }
+            document.getElementById("display").innerHTML = "Mảng ngược lại là: " + arrs;
+
+
+        }
+
+    </script>
+</html>

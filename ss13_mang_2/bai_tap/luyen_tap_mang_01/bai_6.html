@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+    <script>
+        let arrs = [1,2,3,4,5,6,7,8,9,0];
+        let iput = parseInt(prompt("Nhập số cần dò"))
+        let check = false;
+        for(let i =0;i<arrs.length;i++) {
+            if(arrs[i] === iput) {
+              check = true;
+              break;
+            }
+        }
+        if (check) {
+            document.write("V is the array");
+        }
+        else {
+            document.write("V is not the array");
+        }
+
+
+    </script>
+
+</body>
+</html>

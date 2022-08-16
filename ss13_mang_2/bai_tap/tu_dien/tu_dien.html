@@ -2,9 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Từ điển</title>
+    <style>
+        #display {
+            width: 300px;
+            height: 150px;
+            background: chocolate;
+            margin-top: 10px;
+            /*text-align: center;*/
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-$END$
+    <form>
+        <label> <input type="text" name="inputType" id="ip"></label>
+        <input type="button" value="Tìm kiếm" id="timkiem" onclick="tikiem()">
+        <p style="margin-top: 10px">Kết quả tìm kiếm</p>
+        <div id="display"></div>
+
+    </form>
+
 </body>
+<script>
+    function tikiem() {
+        const reseach = document.getElementById("ip").value;
+        // console.log(reseach)
+        const arrs1 = ["Animal","Dog","Cat","Go"];
+        // console.log(arrs1)
+        const arrs2 = ["Động vật","Con chó","Con mèo","Đi"];
+        var result =[];
+        for (let i = 0; i < arrs2.length; i ++) {
+            if (reseach == arrs1[i]) {
+                result = arrs2[i];
+                console.log(result);
+                document.getElementById("display").innerText = result;
+                break;
+            }
+            // console.log(arrs2[i])
+            if (reseach == arrs2[i]) {
+                result = arrs1[i]
+                document.getElementById("display").innerHTML = result;
+                break;
+            }
+            else {
+                document.getElementById("display").innerHTML = "Không có từ cần tìm";
+            }
+        }
+
+    }
+
+
+</script>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function findMin(a,b,c) {
+        if (a < b) {
+            if (a <c) {
+                alert("Số nhỏ nhất là: " + a);
+            }
+            else {
+                alert("Số nhỏ nhất là: " + c);
+            }
+        }
+        else if (b < c) {
+            alert("Số nhỏ nhất là: " + b);
+        }
+        else {
+            alert("Số nhỏ nhất là: "+ c);
+        }
+    }
+    let num1 = parseFloat(prompt("Nhập số 1:"));
+    let num2 = parseFloat(prompt("Nhập số 2: "));
+    let num3 = parseFloat(prompt("Nhập số 3: "));
+    findMin(num1,num2,num3);
+</script>
+</html>

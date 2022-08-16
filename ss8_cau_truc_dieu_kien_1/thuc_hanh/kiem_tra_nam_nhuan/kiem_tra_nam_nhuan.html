@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Kiểm tra năm nhuận</title>
 </head>
 <body>
-$END$
 </body>
+<script>
+ var year = parseFloat(prompt("type the year you choise here:"));
+ var idLeapyear = false;
+// xét điều kiện
+    var isDivisibleby4 = year % 4 == 0;
+    if (isDivisibleby4) {
+        var isDivisibleby100 = year % 100 == 0;
+        if(isDivisibleby100) {
+            var isDivisibleby400 = year % 400 == 0;
+            if(isDivisibleby400) {
+                idLeapyear = true ;
+            }
+        }
+        else {
+            idLeapyear = true;
+        }
+    }
+// Hiện thị
+    if(idLeapyear) {
+        alert("Đây là năm nhuận");
+    }
+    else {
+        alert("Đây không phải năm nhuận");
+    }
+
+    
+</script>
 </html>

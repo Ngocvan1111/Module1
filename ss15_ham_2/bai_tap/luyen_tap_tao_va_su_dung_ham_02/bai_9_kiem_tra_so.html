@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số</title>
+</head>
+<body>
+
+</body>
+<script>
+    function checkNumber(arrs,num) {
+        let count = 0;
+        let check = false;
+        for(let i = 0; i<arrs.length; i++) {
+            if ( arrs[i] == num) {
+                count++;
+                check = true;
+            }
+        }
+        if(check){
+            return count;
+        }
+        else {
+            return -1;
+        }
+
+    }
+    let arr = [];
+    let n = prompt("Chiều dài chuỗi: ");
+    for(let i = 0; i<n;i++){
+        let iput = prompt("Nhập phần tử mảng: ");
+        arr.push(iput);
+    }
+    let numbercheck = parseFloat(prompt("Nhập số cần kiểm tra: "));
+    // document.write("Mảng là: "+ arr)
+    // document.write("Số kiểm tra là: " + numbercheck)
+    let result =   checkNumber(arr,numbercheck);
+    document.write("Chuỗi là: "+arr+"<br>" + "Số kiểm tra là: "+numbercheck + "<br>")
+    // console.log(result)
+    document.write("Số lần xuất hiện là: "+ result);
+
+</script>
+</html>

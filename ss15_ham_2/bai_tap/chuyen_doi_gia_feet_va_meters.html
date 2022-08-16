@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi</title>
+</head>
+<body>
+    <section>
+        <form action="" name="data" id="datafrm">
+            <label>Nhập:<input type="text" name="inputTyp" id="inputType" oninput="footToMeter()"></label>
+            <input type="button" value="footToMeter" id="fToM" onclick="footToMeter()">
+            <input type="button" value="meterToFoot" id="meterToFoot" onclick="metertofoot(this)">
+            <p id="display"> </p>
+        </form>
+    </section>
+
+</body>
+    <script>
+        function footToMeter(foot) {
+            let meter = 0.305*foot;
+            return meter;
+        }
+        function metertofoot(meter) {
+            let foot = 3.279*meter;
+            return foot;
+        }
+
+
+        let foott = prompt("nhap")
+        let resultOfMeter = footToMeter(foott);
+        // console.log(resultOfMeter)
+        document.getElementById("display").innerHTML = resultOfMeter.toString();
+    </script>
+</html>

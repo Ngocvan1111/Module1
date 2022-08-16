@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+
+</body>
+<script>
+    const arrs = [1,2,3,4,5,6,7,8,9,0];
+    let iput = parseInt(prompt("Nhập số cần kiểm tra:"));
+    let positionn ;
+    for (let i = 0 ;i<arrs.length; i++){
+        if(arrs[i] === iput) {
+            // console.log(i)
+            arrs.splice(i,1);
+             positionn = i;
+        }}
+    // }
+    console.log(arrs);
+    alert("Vị trí bị xóa là: " + positionn)
+
+</script>
+</html>
