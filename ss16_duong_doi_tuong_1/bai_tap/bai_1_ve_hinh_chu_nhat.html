@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hinh chu nhat</title>
+</head>
+<body>
+<canvas id="myCanvas" width="10000px" height="10000px" style="border: 2px solid red;"></canvas>
+</body>
+<script>
+    class Rectangle {
+        constructor(x, y, width, height) {
+            this.width = width;
+            this.height = height;
+            this.x = x;
+            this.y = y;
+        }
+
+        perimeter() {
+            return (this.width + this.height) * 2;
+        }
+
+        area() {
+            return this.width * this.height;
+        }
+
+        getRandomHex() {
+            return Math.floor(Math.random() * 255);
+        }
+
+        getRandomColor() {
+            let red = this.getRandomHex();
+            let green = this.getRandomHex();
+            let yellow = this.getRandomHex();
+            return "rgb(" + red + "," + green + "," + yellow + ")";
+        }
+
+        createRectangle() {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.fillStyle = this.getRandomColor();
+            ctx.fill();
+        }
+
+    }
+    let x = Math.random()*window.innerWidth;
+    let y = Math.random()*window.innerHeight;
+    let width = Math.random()*1000 + 300;
+    let height = Math.random()*1000 + 300;
+    let rectangle = new Rectangle(x,y,width,height);
+    rectangle.createRectangle();
+
+</script>
+</html>

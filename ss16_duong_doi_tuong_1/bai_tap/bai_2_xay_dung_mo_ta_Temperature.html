@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing:border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 10vh;
+            color: #FFF;
+            background-color: lightseagreen;
+        }
+        body > div {
+            margin: auto;
+            background-color: #71be34;
+        }
+        .div {
+            margin: auto;
+            color: white;
+            padding: 12px 48px;
+            border-radius: 30px;
+        }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+            min-width: 130px;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+<div class="div">
+    <button class="btn" onclick="CToK()">CToK</button>
+</div>
+<div class="div">
+    <button class="btn" onclick="KToC()">KToC</button>
+</div>
+</body>
+<script>
+    class Temperature {
+        constructor(C,K) {
+            this.C = C;
+            this.K = K;
+        }
+         tranferCToK() {
+             alert("Nhiệt độ K là : "+ ((this.C)*9/5 + 32));
+        }
+        tranferKToC() {
+            alert("Nhiệt độ K là : "+ ((this.K - 32)*5/9));
+        }
+    }
+    function CToK() {
+        let temperatureC = +prompt("Nhập độ C: ")
+        let temperatures = new Temperature(temperatureC);
+        temperatures.tranferCToK();
+    }
+    function KToC() {
+        let temperatureK = +prompt("Nhập độ K: ")
+        let temperature = new Temperature("",temperatureK);
+        temperature.tranferKToC();
+    }
+
+</script>
+</html>
