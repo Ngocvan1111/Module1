@@ -59,21 +59,21 @@
             this.K = K;
         }
          tranferCToK() {
-             alert("Nhiệt độ K là : "+ ((this.C)*9/5 + 32));
+             return ((this.C)*9/5 + 32);
         }
         tranferKToC() {
-            alert("Nhiệt độ K là : "+ ((this.K - 32)*5/9));
+            return ((this.K - 32)*5/9);
         }
     }
     function CToK() {
         let temperatureC = +prompt("Nhập độ C: ")
         let temperatures = new Temperature(temperatureC);
-        temperatures.tranferCToK();
+        alert("Nhiệt độ K là:"+ temperatures.tranferCToK());
     }
     function KToC() {
         let temperatureK = +prompt("Nhập độ K: ")
         let temperature = new Temperature("",temperatureK);
-        temperature.tranferKToC();
+        alert("Nhiệt độ C là: " +temperature.tranferKToC());
     }
 
 </script>
