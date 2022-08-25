@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let choise = +prompt("Menu \n1. Cafe \n2. Cam vắt \n3. Nước ép cà rốt\n" +
+        "4. Nước ép cà chua\n" +
+        "5. Nước lọc\n" +
+        "6. Nước dừa\n"+
+        "7. Chốt đơn\n" )
+    let gia1= 10;
+    let gia2= 15;
+    let gia3= 12;
+    let gia4= 17;
+    let gia5= 11;
+    let gia6= 18;
+    let tongHoaDon = 0;
+    while (choise !== 7){
+        switch (choise) {
+            case 1:
+                alert("Giá tiền: "+ gia1 +".000 VND");
+                break;
+            case 2:
+                alert("Giá tiền: "+ gia2 +".000 VND")
+                break;
+            case 3:
+                alert("Giá tiền: "+ gia3 +".000 VND")
+                break;
+            case 4:
+                alert("Giá tiền: "+ gia4 +".000 VND")
+                break;
+            case 5:
+                alert("Giá tiền: "+ gia5 +".000 VND")
+                break;
+            case 6:
+                alert("Giá tiền: "+ gia6 +".000 VND")
+                break;
+        }
+        let sl = +prompt("Chọn số lượng: ");
+        switch (choise) {
+            case 1:
+                alert("Giá tiền: "+ sl*gia1 +".000 VND");
+                tongHoaDon += sl*gia1;
+                break;
+            case 2:
+                alert("Giá tiền: "+ sl*gia2 +".000 VND");
+                tongHoaDon += sl*gia2;
+                break;
+            case 3:
+                alert("Giá tiền: "+ sl*gia3 +".000 VND");
+                tongHoaDon += sl*gia3;
+                break;
+            case 4:
+                alert("Giá tiền: "+ sl*gia4 +".000 VND");
+                tongHoaDon += sl*gia4;
+                break;
+            case 5:
+                alert("Giá tiền: "+ sl*gia5 +".000 VND");
+                tongHoaDon += sl*gia1;
+                break;
+            case 6:
+                alert("Giá tiền: "+ sl*gia6 +".000 VND");
+                tongHoaDon += sl*gia1;
+                break;
+        }
+        choise = +prompt("Menu \n1. Cafe \n2. Cam vắt \n3. Nước ép cà rốt\n" +
+            "4. Nước ép cà chua\n" +
+            "5. Nước lọc\n" +
+            "6. Nước dừa\n" +
+            "7. Chốt đơn\n");
+    }
+    alert("Tổng tiền: "+tongHoaDon+ ".000 VNĐ");
+
+</script>
+</html>

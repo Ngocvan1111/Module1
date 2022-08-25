@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+        let arrs = [];
+        let size1 = +prompt("Nhập chiều 1: ");
+        let size2 = +prompt("Nhập chiều 2: ");
+        for(let i =0; i< size1; i++){
+            arrs[i]=[];
+            for(let j =0; j< size2; j++){
+                arrs[i][j] = +prompt("nhập phần tử ở hàng "+i+ "cột"+j);
+            }
+        }
+        document.write(arrs)
+        document.write("Tổng các số chẵn là: "+checkEvenNumber(arrs).toString());
+
+    function checkEvenNumber(arrs){
+        let sum = 0;
+        for(let i =0; i< arrs.length; i++){
+            for(let j =0; j<arrs[i].length; j++){
+                if(arrs[i][j]%2 === 0){
+                    sum += arrs[i][j];
+                }
+            }
+        }
+        return sum;
+
+    }
+
+
+
+</script>
+</html>

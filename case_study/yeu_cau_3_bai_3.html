@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+    <script>
+        function findMaxFraction(numerators,denominators) {
+            let maxFraction = 0;
+            let max = (numerators[0]/denominators[0]);
+            for( let i = 0; i< numerators.length;i++){
+                if((numerators[i]/denominators[i]) > max){
+                    max = (numerators[i]/denominators[i]);
+                    maxFraction = i;
+                }
+            }
+            return maxFraction;
+        }
+ ////check
+        let nummeratorsA = [5, 2, 5];
+        let denominatorsB = [6, 3, 4];
+        document.write(findMaxFraction(nummeratorsA,denominatorsB).toString());
+
+    </script>
+</html>

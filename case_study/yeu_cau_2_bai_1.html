@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let grossSalary = +prompt("Nhập lương nhân viên: ");
+    function caculateNetSalaryAndTax(grossSalary) {
+        if(grossSalary >= 15){
+            document.write("Lương thực nhận là: "+ (grossSalary-(grossSalary*0.2))+"<br>");
+            document.write("Thuế phải trả là: "+ (grossSalary*0.2).toFixed(1))
+        }
+        else if(grossSalary >= 7 ){
+            document.write("Lương thực nhận là: "+ (grossSalary-(grossSalary*0.1))+"<br>");
+            document.write("Thuế phải trả là: "+ (grossSalary*0.1).toFixed(1));
+        }
+        else {
+            document.write("Lương thực nhận là: "+ (grossSalary-(grossSalary*0.05))+"<br>");
+            document.write("Thuế phải trả là: "+ (grossSalary*0.05).toFixed(1));
+        }
+    }
+    caculateNetSalaryAndTax(grossSalary);
+</script>
+</html>

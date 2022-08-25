@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function checkVowelOrConsonant(character) {
+        let vowel = ["o","u","e","a","i","O","U","E","A","I"];
+            if(vowel.includes(character)){
+                alert("Đây là nguyên âm ");
+            }
+            else {
+                alert("Đây là phụ âm ")
+            }
+    }
+    let character = prompt("Nhập ký tự:")
+    checkVowelOrConsonant(character);
+</script>
+</html>

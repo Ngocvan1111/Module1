@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function missingValue(arrayA,arrayB) {
+        let results = [];
+        for(let i =0;i<arrayB.length;i++){
+            if(arrayA.includes(arrayB[i]) === false){
+                if(results.includes(arrayB[i]) === false){
+                   results.push(arrayB[i]) ;
+                }
+            }
+        }
+        return results;
+    }
+    let A = [1,2,3,4,5];
+    let B = [1,2,3,4,7,9];
+    document.write(missingValue(A,B).toString());
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function find(arr1,arr2) {
+        let count = 0;
+        for(let i =0; i< arr1.length;i++){
+            for(let j = 0; j<arr2.length; j++){
+                if(arr1[i] == arr2[j]){
+                    arr2.splice(j,1);
+                    count++;
+                    break;
+                }
+            }
+        }
+        return count;
+    }
+    let arr1 = prompt("nhập chuỗi 1");
+    let arr2 = prompt("nhập chuỗi 2");
+    arr1 =arr1.toString().split('');
+    arr2 = arr2.toString().split('');
+    document.write(find(arr1,arr2));
+</script>
+</html>
