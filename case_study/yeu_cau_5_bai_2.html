@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let count =0;
+    let arrays = [[1,2,3,4],[7,4,3,2,1]];
+    let result =[];
+    let tongSoNguyenTo = 0;
+    for(let i =0; i<arrays.length; i++){
+        for(let j=0; j<arrays[i].length;j++){
+            count = 0
+            for(let k=1;k<=arrays[i][j];k++){
+                if(arrays[i][j]%k === 0){
+                    count++;
+                }
+            }
+        if(count === 2){
+            tongSoNguyenTo += 1;
+            result.push(arrays[i][j])
+        }
+        }
+    }
+    document.write("Tổng số nguyên tố có trong mảng là: "+tongSoNguyenTo+"<br>"+"Các số nguyên tố là: "+ result)
+</script>
+</html>

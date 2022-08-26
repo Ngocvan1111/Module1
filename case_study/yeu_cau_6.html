@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            border-radius: 40px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            background: green;
+            color: red;
+        }
+
+        .btn {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>Xổ số CodeGym</h2>
+<div id="display"></div>
+<input type="button" value="Mua vé" id="muaVe" class="btn" onclick="muaVe()">
+<input type="button" value="Xem kết quả" id="xemKetQua" class="btn" onclick="xemKetQua()">
+</body>
+<script>
+    class Xoso {
+        constructor(so1, so2, so3, so4, so5, so6) {
+            this.so1 = so1;
+            this.so2 = so2;
+            this.so3 = so3;
+            this.so4 = so4;
+            this.so5 = so5;
+            this.so6 = so6;
+        }
+
+        getSo1() {
+            return this.so1;
+        }
+
+        getSo2() {
+            return this.so2;
+        }
+
+        getSo3() {
+            return this.so3;
+        }
+
+        getSo4() {
+            return this.so4;
+        }
+
+        getSo5() {
+            return this.so5;
+        }
+
+        getSo6() {
+            return this.so6;
+        }
+
+        setSo1(so1) {
+            this.so1 = so1;
+        }
+
+        setSo2(so2) {
+            this.so2 = so2;
+        }
+
+        setSo3(so3) {
+            this.so3 = so3;
+        }
+
+        setSo4(so4) {
+            this.so4 = so4;
+        }
+
+        setSo5(so5) {
+            this.so5 = so5;
+        }
+
+        setSo6(so6) {
+            this.so6 = so6;
+        }
+    }
+
+    let arrs = [];
+
+    function view(arrs) {
+        let drtable = "<table  cellpadding='10' border='1' cellspacing='10'>"
+        for (let i = 0; i < arrs.length; i++) {
+            drtable += "<tr>"
+            drtable += "<td class='box'>" + arrs[i].getSo1() + "</td>";
+            drtable += "<td class='box'>" + arrs[i].getSo2() + "</td>";
+            drtable += "<td class='box'>" + arrs[i].getSo3() + "</td>";
+            drtable += "<td class='box'>" + arrs[i].getSo4() + "</td>";
+            drtable += "<td class='box'>" + arrs[i].getSo5() + "</td>";
+            drtable += "<td class='box'>" + arrs[i].getSo6() + "</td>";
+            drtable += "</tr>"
+        }
+        drtable += "</table>";
+        document.getElementById("display").innerHTML = drtable;
+    }
+
+    function muaVe() {
+        let choise = +prompt("Chọn cách mua vé \n 1. Chọn 1 để mua từng cặp số cho vé. \n 2. Chọn 2 để mua 1 số ngẫu nhiên. ");
+        let so1;
+        let so2;
+        let so3;
+        let so4;
+        let so5;
+        let so6;
+        switch (choise) {
+            case 1:
+                so1 = +prompt("Nhập cặp số đầu tiên: ");
+                so2 = +prompt("Nhập cặp số thứ 2: ");
+                so3 = +prompt("Nhập cặp số thứ 3: ");
+                so4 = +prompt("Nhập cặp số thứ 4: ");
+                so5 = +prompt("Nhập cặp số thứ 5: ");
+                so6 = +prompt("Nhập cặp số thứ 6: ");
+                xoso = new Xoso(so1, so2, so3, so4, so5, so6);
+                arrs.push(xoso);
+                view(arrs);
+                break;
+            case 2:
+                so1 = Math.floor(Math.random() * 99);
+                so2 = Math.floor(Math.random() * 99);
+                so3 = Math.floor(Math.random() * 99);
+                so4 = Math.floor(Math.random() * 99);
+                so5 = Math.floor(Math.random() * 99);
+                so6 = Math.floor(Math.random() * 99);
+                xoso = new Xoso(so1, so2, so3, so4, so5, so6);
+                arrs.push(xoso);
+                view(arrs)
+        }
+    }
+
+    function xemKetQua() {
+        let ketQua = [11, 22, 33, 44, 55, 66];
+        for (let i = 0; i < arrs.length; i++) {
+            if (arrs[i].getSo1() === ketQua[0] && arrs[i].getSo2() === ketQua[1] && arrs[i].getSo3() === ketQua[2] && arrs[i].getSo4() === ketQua[3] && arrs[i].getSo5() === ketQua[4] && arrs[i].getSo6() === ketQua[5]) {
+                alert("Chúc mừng bạn đã trúng giải đặc biệt: TRị giá XXXX VNĐ")
+            } else if (arrs[i].getSo2() === ketQua[1] && arrs[i].getSo3() === ketQua[2] && arrs[i].getSo4() === ketQua[3] && arrs[i].getSo5() === ketQua[4] && arrs[i].getSo6() === ketQua[5]) {
+                alert("Chúc mừng bạn đã trúng giải 2: TRị giá XXX VNĐ")
+            } else if (arrs[i].getSo4() === ketQua[3] && arrs[i].getSo5() === ketQua[4] && arrs[i].getSo6() === ketQua[5]) {
+                alert("Chúc mừng bạn đã trúng giải 3: TRị giá XXX VNĐ")
+            } else {
+                alert("Chúc bạn may mắn lần sau: ")
+            }
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background: green;
+        }
+        .sl {
+            margin: 10px;
+            width: 100px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        .div1 {
+            width: 100%;
+            height: 100px;
+        }
+        #lb {
+            display: flex;
+            margin-top: -55px;
+            margin-left: 35%;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <img src="data:image/png;base64,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"  style="width: 70px; height: 70px; margin-left: 30px; margin-top: 15px" alt="Đây là logo Codegym">
+        <label id="lb" style="font-size: 30px">Hệ thống quản lý bài tập Casestudy module 1</label>
+    </div>
+    <hr>
+    <select class="sl">
+        <option> Bài tập 1 </option>
+        <option> Bài tập 2 </option>
+        <option> Bài tập 3 </option>
+        <option> Bài tập 4 </option>
+        <option> Bài tập 5 </option>
+        <option> Bài tập 6 </option>
+        <option> Bài tập 7 </option>
+        <option> Bài tập 8 </option>
+    </select><br>
+
+    <select class="sl">
+        <option> Bài tập 1 </option>
+        <option> Bài tập 2 </option>
+        <option> Bài tập 3 </option>
+        <option> Bài tập 4 </option>
+        <option> Bài tập 5 </option>
+        <option> Bài tập 6 </option>
+        <option> Bài tập 7 </option>
+        <option> Bài tập 8 </option>
+    </select><br>
+    <select class="sl">
+        <option> Bài tập 1 </option>
+        <option> Bài tập 2 </option>
+        <option> Bài tập 3 </option>
+        <option> Bài tập 4 </option>
+        <option> Bài tập 5 </option>
+        <option> Bài tập 6 </option>
+        <option> Bài tập 7 </option>
+        <option> Bài tập 8 </option>
+    </select><br>
+    <select class="sl">
+        <option> Bài tập 1 </option>
+        <option> Bài tập 2 </option>
+        <option> Bài tập 3 </option>
+        <option> Bài tập 4 </option>
+        <option> Bài tập 5 </option>
+        <option> Bài tập 6 </option>
+        <option> Bài tập 7 </option>
+        <option> Bài tập 8 </option>
+    </select><br>
+
+</body>
+    <script>
+
+    </script>
+</html>

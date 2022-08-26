@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrays = [[1,2,3,4],[7,4,3,2,1]];
+    let max = arrays[0][0];
+    let min = arrays[0][0];
+    for (let i = 0;i<arrays.length; i ++){
+        for(let j = 0;j<arrays[i].length; j++){
+            if(arrays[i][j]>max){
+                max = arrays[i][j];
+            }
+            else {
+                min = arrays[i][j];
+            }
+        }
+    }
+    document.write("Số lớn nhất là: "+max+"<br>");
+    document.write("Số bé nhất là: "+min);
+</script>
+</html>
