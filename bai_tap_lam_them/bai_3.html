@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function findFibonaciiIn(array) {
+        let number1 = 0;
+        let nember2 = 1;
+        let finbonaci = 0;
+        let arrayFibonaci = [0];
+        let result = [];
+        for (let i = 0; i <= findMax(array); i++) {
+            finbonaci = nember2 + number1;
+            number1 = nember2;
+            nember2 = finbonaci;
+            arrayFibonaci.push(finbonaci);
+            finbonaci = 0;
+        }
+        for (let j = 0; j < array.length; j++) {
+            if (arrayFibonaci.includes(array[j])) {
+                result.push(array[j]);
+            }
+
+        }
+        return result;
+
+    }
+
+    function findMax(array) {
+        let max = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i]
+            }
+        }
+        return max;
+    }
+
+    function arrangeMinToMax(array) {
+        let bridge = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = i; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    bridge = array[i]
+                    array[i] = array[j]
+                    array[j] = bridge;
+                }
+            }
+        }
+        return array;
+    }
+    let size = +prompt("Nhập vào chiều dài mảng: ");
+    let arrs = [];
+    for (let i = 0;i<size;i++){
+        let element = +prompt("Nhập vào phần tủ thứ: "+(i +1));
+        arrs.push(element);
+    }
+
+    document.write(findFibonaciiIn(arrs) + "<br>");
+    document.write(arrangeMinToMax(findFibonaciiIn(arrs)).toString())
+</script>
+</html>

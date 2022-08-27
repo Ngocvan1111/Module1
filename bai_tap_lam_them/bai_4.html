@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #display {
+            width: 70%;
+            height: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<label><input type="text" id="code" placeholder="Mã máy"></label>
+<label><input type="text" id="name" placeholder="Tên máy"></label>
+<label><input type="text" id="campany" placeholder="Hãng sản xuất"></label>
+<label><input type="text" id="price" placeholder="Giá bán"></label>
+<label><input type="button" id="add" value="Add New" onclick="addNew()"></label>
+<label><input type="button" id="arrange" value="Arrange" onclick="arrange()"></label>
+<div id="display"></div>
+
+
+</body>
+<script>
+    class Computer {
+        constructor(code, name, campany, price) {
+            this.code = code;
+            this.name = name;
+            this.campany = campany;
+            this.price = price;
+        }
+
+        setCode(code) {
+            this.code = code;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setCampany(campany) {
+            this.campany = campany;
+        }
+
+        setPrice(price) {
+            this.price = price;
+        }
+
+        getCode() {
+           return  this.code;
+        }
+
+        getName() {
+           return  this.name;
+        }
+
+        getCampany() {
+           return  this.campany;
+        }
+
+        getPrice() {
+           return  this.price;
+        }
+
+        toString() {
+            return "Mã máy: " + this.code + "|| Tên máy: " + this.name + "|| Hãng sản xuất: " + this.campany + "|| Giá bán: " + this.price;
+        }
+    }
+
+    let computer1 = new Computer(123, "MSI", "MSI", 12);
+    let computer2 = new Computer(132, "MSI", "MSI", 13);
+    let computer3 = new Computer(133, "MSI", "MSI", 11);
+    let computerList = [computer1,computer2,computer3];
+    displayList(computerList);
+
+    function displayList(computerList) {
+        let drtable = "<table border='1' width='600'  cellspacing='3' cellpadding='3' style='margin: 5px; padding: 10px; text-align: center'>"
+        drtable += "<tr>";
+        drtable += "<th>" + " STT" + "</th>";
+        drtable += "<th>" + " Mã máy" + "</th>";
+        drtable += "<th>" + " Tên máy" + "</th>";
+        drtable += "<th>" + " Hãng sản xuất" + "</th>";
+        drtable += "<th>" + " Giá bán" + "</th>";
+        drtable += "</tr>";
+        for (let i = 0; i < computerList.length; i++) {
+            drtable += "<tr>";
+            drtable += "<td>" + (i + 1) + "</td>";
+            drtable += "<td>" + computerList[i].getCode() + "</td>";
+            drtable += "<td>" + computerList[i].getName() + "</td>";
+            drtable += "<td>" + computerList[i].getCampany() + "</td>";
+            drtable += "<td>" + computerList[i].getPrice()+".000 VNĐ" + "</td>";
+            drtable += "</tr>"
+        }
+        drtable += "</table>";
+        document.getElementById("display").innerHTML = drtable;
+    }
+    function addNew() {
+        let code = document.getElementById("code").value;
+        let name = document.getElementById("name").value;
+        let campany = document.getElementById("campany").value;
+        let price = document.getElementById("price").value;
+        let computer = new Computer(code, name, campany, price);
+        computerList.push(computer);
+        displayList(computerList);
+    }
+
+    function arrange() {
+        for(let i =0; i< computerList.length; i++){
+            let bridge = [];
+            for(let j =i; j<computerList.length;j++){
+                if(Number(computerList[i].getPrice()) > Number(computerList[j].getPrice())){
+                    bridge = computerList[i];
+                    computerList[i] = computerList[j] ;
+                    computerList[j] = bridge ;
+                }
+            }
+        }
+        displayList(computerList);
+
+    }
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrs = [];
+    let size;
+    let element;
+    do {
+        size = +prompt("Nhập chiều dài mảng <= 50:");
+    } while (size > 50);
+    for (let i = 0; i < size; i++) {
+        element = +prompt("Nhập phần tử thứ" + (i + 1));
+        arrs.push(element);
+    }
+    document.write(arrs + "<br>");
+    document.write(caculateAverage(arrs).toString());
+
+    function caculateAverage(array) {
+        let average;
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (i % 3 === 0 && array[i] % 5 === 0) {
+                sum += array[i];
+                count++;
+            }
+        }
+        average = sum / count;
+        return average;
+    }
+
+</script>
+</html>
